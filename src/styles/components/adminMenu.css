@@ -1,0 +1,159 @@
+.menu-container {
+    background-color: #0055A3;
+    width: 18vw;
+    height: 100%;
+    min-height: 100vh;
+}
+
+
+.uni-container {
+    display: flex;
+    height: 10vh;
+    background-color: #0060ba;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-container {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    padding-left: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-color: #D9D9D9;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.label-container {
+    display: grid;
+}
+
+.home-logo-image {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    margin-right: 0.5vw;
+}
+
+.uni-label {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.avatar-image {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    margin-right: 1vw;
+}
+
+.name-label {
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #FFFFFF;
+}
+
+.id-label {
+    color: #FFFFFF;
+    font-size: 1em;
+}
+
+.tab-container {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    padding-left: 2vw;
+    display: flex;
+
+    &:hover {
+        background-color: #004484;
+        cursor: pointer;
+    }
+}
+
+.active {
+    background-color: #004484;
+    border-left: 5px solid #FFFFFF;
+}
+
+.tab-label {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-top: 0.3vh;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.tab-icon {
+    color: #FFFFFF;
+    font-size: 1.8em;
+    margin-right: 1vw;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.child-icon {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    margin-left: 5vw;
+    margin-top: 0.5vh;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.child-tab-container {
+    margin-top: 0.2vh;
+    margin-bottom: 0.2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 3vw;
+}
+
+.logout-container {
+    position: fixed;
+    bottom: 1vh;
+    left: 4vw;
+    margin-top: 3vh;
+    display: flex;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.logout-button {
+    background-color: #0055A3;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1em;
+    align-items: center;
+    display: flex;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #004484;
+    }
+}
+
+.logout-icon {
+    color: #FFFFFF;
+    font-size: 1.8em;
+    margin-right: 1vw;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

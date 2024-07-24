@@ -1,0 +1,88 @@
+.home-container {
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 5vh;
+    right: 15vw;
+    bottom: 5vh;
+    left: 15vw;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.user-table-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.user-table-header {
+    padding-left: 0vw;
+    text-align: center;
+}
+
+.user-table-item {
+    padding: 0.5vh 1vw;
+    text-align: center;
+}
+
+.odd {
+    background-color: #ececec;
+}
+
+.section-button {
+    width: 5vw;
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-right: 0.5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 5px;
+    border-color: transparent;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.uncompleted {
+    background-color: #00a900;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #009300;
+    }
+}
+
+.completed {
+    background-color: #b4b4b4;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #959595;
+    }
+}
+
+.upcoming {
+    background-color: #00a900;
+    opacity: 0.5;
+}
+
+.expired {
+    background-color: #be0d00;
+}
+
+.section-icon {
+    font-size: 1.5em;
+    margin-right: 0.2vw;
+}
+
+.state-label {
+    font-size: 0.8em;
+}
+
+.state-icon {
+    font-size: 1em;
+    margin-right: 0.2vw;
+}

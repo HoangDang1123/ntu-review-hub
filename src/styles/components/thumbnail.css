@@ -1,0 +1,11 @@
+.thumb-container {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+.thumb-image {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}

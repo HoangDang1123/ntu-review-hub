@@ -1,0 +1,124 @@
+.form-container {
+    position: absolute;
+    background-color: white;
+    margin-left: 4vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 22vw;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.logo-image {
+    width: 10vw;
+    height: 10vw;
+}
+
+.site-title {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 600;
+    color: #0055A3;
+    padding: 0vh;
+    margin: 0vh;
+}
+
+.form-group {
+    display: grid;
+    margin-top: 1vh;
+}
+
+.form-label {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.form-input {
+    width: 16vw;
+    font-size: 1em;
+    border-radius: 8px;
+    border-color: #0055A3;
+    border-width: 2px;
+    border-style: solid;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 0.5vw;
+    margin-top: 0.5vh;
+}
+
+.form-select {
+    width: 17vw;
+    font-size: 1em;
+    border-radius: 8px;
+    border-color: #0055A3;
+    border-width: 2px;
+    border-style: solid;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 0.5vw;
+    margin-top: 0.5vh;
+}
+
+.error-label {
+    font-size: 0.7em;
+    color: #E50000;
+}
+
+.visible-icon {
+    position: absolute;
+    right: 4vw;
+    padding-top: 1vh;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.link-container {
+    flex-direction: row;
+    display: flex;
+    justify-self: end;
+    margin-bottom: 5vh;
+}
+
+.link {
+    font-size: 0.8em;
+}
+
+.button {
+    width: 17vw;
+    padding-top: 0.8vh;
+    padding-bottom: 0.8vh;
+    border-radius: 8px;
+    font-size: 1em;
+    border-color: transparent;
+    border-style: solid;
+    margin-top: 2vh;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.primary-button {
+    background-color: #0055A3;
+    color: #FFFFFF;
+
+    &:hover {
+        background-color: #004484;
+    }
+}
+
+.secondary-button {
+    background-color: #D9D9D9;
+    color: #000000;
+
+    &:hover {
+        background-color: #bcbcbc;
+    }
+}
