@@ -7,8 +7,12 @@ import RadioQuestion from "./RadioQuestion";
 import MatrixQuestion from "./MatrixQuestion";
 import { toast } from "react-toastify";
 
-function checkBlank(question, questionType) {
-  if (question.trim() === "" || questionType.trim() === "") {
+function checkBlank(question, questionType, scales) {
+  if (
+    question.trim() === "" ||
+    questionType.trim() === "" ||
+    scales.trim() === ""
+  ) {
     return true;
   }
   return false;
@@ -117,7 +121,7 @@ export default function AddQuestion() {
       showScalesError: formData.scales.trim() === "",
     }));
 
-    if (!checkBlank(formData.question, formData.answerType)) {
+    if (!checkBlank(formData.question, formData.answerType, formData.scales)) {
       try {
         await createQuestion(id, formData);
       } catch (error) {}
