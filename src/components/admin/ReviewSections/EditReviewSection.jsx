@@ -99,6 +99,30 @@ export default function EditReviewSection() {
         year: formData.year,
       });
 
+      const userRef = realtimeDB.ref("user-review-sections");
+      userRef
+      .once("value")
+      .then((snapshot) => {
+        const users = snapshot.val();
+        for (let key in users) {
+          console.log(users[key].id)
+          if (users[key].id === id) {
+            console.log(key);
+            realtimeDB.ref("user-review-sections/" + key).update({
+              id: id,
+              reviewName: formData.reviewName,
+              startDate: formData.startDate,
+              endDate: formData.endDate,
+              note: formData.note,
+              year: formData.year,
+            });
+          }
+        }
+      })
+      .catch((error) => {
+        console.error("Lỗi lấy dữ liệu users:", error);
+      });
+
       navigate("/admin/review-section");
       toast.success("Lưu đợt đánh giá thành công!");
       console.log("Lưu đợt đánh giá thành công!");
