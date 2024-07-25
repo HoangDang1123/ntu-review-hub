@@ -76,7 +76,7 @@ export default function ReviewSectionScreen() {
   };
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", overflowY: "auto" }}>
       <div className={`page-container unit ${activeModal ? "activeForm" : ""}`}>
         <label className="page-label">Đợt đánh giá</label>
 

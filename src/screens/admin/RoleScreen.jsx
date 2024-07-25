@@ -54,7 +54,7 @@ export default function RoleScreen() {
   }
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', overflowY: "auto" }}>
       <div className={`page-container item ${activeModal ? "activeForm" : ""}`}>
         <label className="page-label">Chức vụ</label>
 

@@ -102,7 +102,7 @@ export default function HomeScreen() {
               ) : item.state === "Đã xong" ? (
                 <button className="section-button completed">
                   <BiDetail className="section-icon" />
-                  Xem lại
+                  Xong
                 </button>
               ) : item.state === "Chưa bắt đầu" ? (
                 <button className="section-button upcoming">

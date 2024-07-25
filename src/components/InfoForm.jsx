@@ -17,6 +17,7 @@ export default function SelectInfoForm({ showForm, sharedData }) {
   const [unit, setUnit] = useState([]);
   const [subject, setSubject] = useState([]);
   const [role, setRole] = useState([]);
+  const [disabled, setDisabled] = useState(false);
 
   const [formData, setFormData] = useState({
     fullName: sharedData.fullName,
@@ -56,17 +57,19 @@ export default function SelectInfoForm({ showForm, sharedData }) {
     userRef.on("value", (snapshot) => {
       const subject = snapshot.val();
       if (subject) {
-        const dataArray = Object.keys(subject).map((key) => ({
-          ...subject[key],
-        }));
+        const dataArray = Object.keys(subject)
+          .filter((key) => subject[key].unit === formData.unit)
+          .map((key) => ({
+            ...subject[key],
+          }));
         setSubject(dataArray);
       }
     });
-
+  
     return () => {
       userRef.off();
     };
-  }, []);
+  }, [formData.unit]);
 
   useEffect(() => {
     const userRef = realtimeDB.ref("roles");
@@ -87,16 +90,26 @@ export default function SelectInfoForm({ showForm, sharedData }) {
 
   const handleSelectChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-
+  setFormData((prevFormData) => ({
+    ...prevFormData,
+    [name]: value,
+    ...(name === 'personnel' && (value === 'Sinh viên' || value === 'Chuyên viên')
+      ? { subject: 'N/A' }
+      : {}),
+    ...(name === 'unit' && value.includes('Phòng')
+      ? { subject: 'N/A' }
+      : {}),
+  }));
+  
     setFormErrors((prevFormErrors) => ({
       ...prevFormErrors,
       [`show${name.charAt(0).toUpperCase() + name.slice(1)}Error`]:
         value.trim() === "",
     }));
+  
+    if (name === 'personnel') {
+      setDisabled(value === 'Sinh viên' || value === 'Chuyên viên');
+    }
   };
 
   const handleBack = async (e) => {
@@ -201,6 +214,7 @@ export default function SelectInfoForm({ showForm, sharedData }) {
           value={formData.subject}
           onChange={handleSelectChange}
           className="form-select"
+          disabled={disabled}
         >
           <option value="">Chọn tổ bộ môn</option>
           {subject.map((item) => (

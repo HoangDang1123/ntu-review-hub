@@ -36,7 +36,6 @@ th {
     padding: 0.5vh 1vw 0.5vh 1vw;
     margin-top: 0px;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
 }
 
@@ -52,7 +51,7 @@ td {
     height: 6vh;
     max-width: 10vw;
     white-space: nowrap;
-    overflow: hidden;
+    overflow-x: hidden;
     text-overflow: ellipsis;
     padding: 0.5vh 1vw 0.5vh 1vw;
     border-bottom: 2px solid #FFFFFF;

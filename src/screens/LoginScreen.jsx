@@ -157,7 +157,7 @@ export default function LoginPage() {
             )}
           </div>
           <div className="link-container">
-            <a href="http://localhost:3000/" className="link">
+            <a href="https://ntu-review-hub.vercel.app/" className="link">
               Quên mật khẩu?
             </a>
           </div>
