@@ -46,6 +46,7 @@ export default function AddBeReviewed() {
             .filter(
               (key) =>
                 data[key].role === "user" &&
+              data[key].personnel === "Giảng viên" &&
                 (!reviewerData || !Object.keys(reviewerData).includes(key))
             )
             .map((key) => ({

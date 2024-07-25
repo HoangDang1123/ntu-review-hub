@@ -46,6 +46,7 @@ export default function AddReviewer() {
             .filter(
               (key) =>
                 data[key].role === "user" &&
+                data[key].personnel !== "Giảng viên" &&
                 (!beReviewedData || !Object.keys(beReviewedData).includes(key))
             )
             .map((key) => ({
